@@ -87,7 +87,7 @@ uint64 count_freemem(void)
     uint64 count_n = 0;
     for(; r != 0; r = r->next)
     {
-        count_n += 4096;
+        count_n += PGSIZE;
     }
 
     return count_n;
